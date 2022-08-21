@@ -88,10 +88,6 @@ namespace BDD.StepDefinitions
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             IWebElement confirmMessage = driver.FindElement(By.XPath("//*[@id=\"center_column\"]"));
             Assert.That(confirmMessage.Text, Does.Contain("Welcome to your account."));
-            
-            /*string expectedURL = "http://automationpractice.com/index.php?controller=my-account";
-            string actualURL = driver.Url;
-            Assert.That(expectedURL, Is.EqualTo(actualURL));*/
 
             driver.Quit();
         }

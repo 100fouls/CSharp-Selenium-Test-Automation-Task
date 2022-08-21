@@ -14,9 +14,8 @@ namespace BDD.StepDefinitions
         [When(@"I enter a valid email address and invalid password")]
         public void WhenIEnterAValidEmailAddressAndInvalidPassword()
         {
-            /*driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);*/
-            /*driver.FindElement(By.XPath("//*[@id=\"email\"]")).SendKeys(workingEmailAddress);*/
-            /*driver.FindElement(By.Id("email")).SendKeys(workingEmailAddress);*/
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            driver.FindElement(By.XPath("//*[@id=\"email\"]")).SendKeys(workingEmailAddress);
             driver.FindElement(By.XPath("//*[@id=\"passwd\"]")).SendKeys(workingPassword + "a");
             driver.FindElement(By.XPath("//*[@id=\"SubmitLogin\"]")).Click();
         }
